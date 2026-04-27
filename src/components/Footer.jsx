@@ -5,13 +5,13 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-inner">
                 <p className="footer-copy">
-                    © {year} — Designed & Built by <span>Thanawat Kruangkrai</span> with ❤️
+                    © {year} — Designed & Built by <span>Thanawat Saninat</span> with ❤️
                 </p>
                 <div className="footer-links">
                     <a href="#hero">Home</a>
                     <a href="#about">About</a>
                     <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#experience">Experience</a>
                 </div>
             </div>
         </footer>

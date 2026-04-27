@@ -5,7 +5,7 @@ const navLinks = [
     { href: '#about', label: 'About' },
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#experience', label: 'Experience' },
 ];
 
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-inner">
-                <a href="#hero" className="navbar-logo">&lt;Thanawat&gt;</a>
+                <a href="#hero" className="navbar-logo">My portfoilo</a>
 
                 <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
                     {navLinks.map(link => (

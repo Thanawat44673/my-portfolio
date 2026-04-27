@@ -50,8 +50,16 @@
     grid-template-columns: 1fr;
   }
 
-  .contact-card {
-    padding: 32px 24px;
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-item {
+    padding: 28px;
+  }
+
+  .job-title {
+    font-size: 1.25rem;
   }
 
   .footer-inner {
