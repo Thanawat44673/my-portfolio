@@ -52,14 +52,3 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 30px var(--accent-glow);
 }
-
-.btn-outline {
-  background: transparent;
-  color: var(--text-primary);
-  border: 1.5px solid var(--border);
-}
-
-.btn-outline:hover {
-  background: var(--border);
-  transform: translateY(-2px);
-}

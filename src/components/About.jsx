@@ -25,7 +25,7 @@ export default function About() {
         <section className="about" id="about" ref={sectionRef}>
             <div className="container">
                 <h2 className="section-title fade-in">About Me</h2>
-                <p className="section-subtitle fade-in">Get to know the developer behind the code</p>
+                <p className="section-subtitle fade-in"></p>
 
                 <div className="about-grid">
                     <div className="about-text fade-in">
