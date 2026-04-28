@@ -51,7 +51,7 @@ export default function About() {
                         </div>
 
                         <div style={{ marginTop: '28px' }}>
-                            <a href="#contact" className="btn btn-primary">Get In Touch ✉️</a>
+                            <a href="#experience" className="btn btn-primary">Get In Touch ✉️</a>
                         </div>
                     </div>
 

@@ -43,7 +43,7 @@ my-portfolio/
 │   │   ├── About.jsx
 │   │   ├── Skills.jsx
 │   │   ├── Projects.jsx
-│   │   ├── Contact.jsx
+│   │   ├── Experience.jsx
 │   │   └── Footer.jsx
 │   ├── context/
 │   │   └── ThemeContext.jsx
@@ -57,7 +57,7 @@ my-portfolio/
 │   │   ├── about.css          # About section
 │   │   ├── skills.css         # Skills section
 │   │   ├── projects.css       # Projects section
-│   │   ├── contact.css        # Contact form section
+│   │   ├── Experience.css     # Experience section
 │   │   ├── footer.css         # Footer section
 │   │   └── responsive.css     # Media query breakpoints
 │   ├── App.jsx

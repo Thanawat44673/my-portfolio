@@ -49,7 +49,7 @@ export default function Hero() {
 
                 <div className="hero-image-wrapper" style={{ flexShrink: 0 }}>
                     <div className="hero-avatar">
-                        <div className="hero-avatar-inner"><img src={avatarImg} alt="Thanawat Avatar"/></div>
+                        <div className="hero-avatar-inner"><img src={avatarImg}/></div>
                     </div>
                 </div>
             </div>
