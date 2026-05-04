@@ -22,29 +22,6 @@
   margin-bottom: 28px;
 }
 
-.about-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.highlight-chip {
-  padding: 6px 14px;
-  background: var(--skill-bg);
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  font-size: 0.82rem;
-  color: var(--accent-secondary);
-  font-weight: 500;
-}
-
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
 .stat-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);

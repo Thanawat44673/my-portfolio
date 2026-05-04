@@ -4,22 +4,22 @@ const categories = [
     {
         icon: '🎨',
         title: 'Frontend',
-        skills: ['React', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Vite', 'Redux'],
+        skills: ['React', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Vite'],
     },
     {
         icon: '⚙️',
         title: 'Backend',
-        skills: ['Node.js', 'Express', 'REST API', 'GraphQL', 'JWT', 'WebSockets'],
+        skills: ['Node.js', 'Express', 'REST API', 'JWT', '.NET Minimal API'],
     },
     {
         icon: '🗄️',
         title: 'Database',
-        skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Prisma', 'Sequelize'],
+        skills: ['PostgreSQL', 'MySQL', 'Firebase'],
     },
     {
         icon: '🛠️',
         title: 'Tools & DevOps',
-        skills: ['Git', 'GitHub', 'Docker', 'Linux', 'VS Code', 'Postman', 'Figma'],
+        skills: ['Git', 'GitHub', 'Docker', 'Vercel', 'Postman', 'Figma'],
     },
 ];
 

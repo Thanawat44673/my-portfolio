@@ -1,4 +1,4 @@
-import avatarImg from '../assets/35eeafb89e6c76c73cd7cbbba9f35847.jpg';
+import avatarImg from '../assets/ปกเลซูเม่.jpg';
 
 export default function Hero() {
     return (
