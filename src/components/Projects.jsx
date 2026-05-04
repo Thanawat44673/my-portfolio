@@ -4,62 +4,42 @@ const projects = [
     {
         emoji: '🛒',
         gradient: 'linear-gradient(135deg, #7c3aed22, #a855f722)',
-        title: 'Village Food Trading',
+        title: 'A development of vegetable trading application: a case study of khun khambun garden',
         description:
-            'A full-stack e-commerce platform for local food shops. Features authentication, shop management, cart, and orders.',
-        tags: ['React', 'Node.js', 'PostgreSQL', 'JWT'],
+            'Khun Kamboon\'s Vegetable Trading Application is an online platform designed to expand market access for homegrown vegetable trading.',
+        tags: ['Flutter', 'Dart', 'Android Studio', 'Firebase'],
         demo: '#',
-        code: 'https://github.com/Thanawat44673/E-Commerce_minimal_API.git',
-    },
-    {
-        emoji: '📱',
-        gradient: 'linear-gradient(135deg, #0ea5e922, #6366f122)',
-        title: 'Task Manager Pro',
-        description:
-            'A productivity app with real-time collaboration, drag-and-drop boards, and team workspaces.',
-        tags: ['React', 'WebSockets', 'Redis', 'Express'],
-        demo: '#',
-        code: 'https://github.com',
-    },
-    {
-        emoji: '🤖',
-        gradient: 'linear-gradient(135deg, #22c55e22, #14b8a622)',
-        title: 'AI Chat Interface',
-        description:
-            'A ChatGPT-style interface with streaming responses, conversation history, and multiple model support.',
-        tags: ['React', 'OpenAI API', 'Node.js', 'MongoDB'],
-        demo: '#',
-        code: 'https://github.com',
+        code: 'https://github.com/Thanawat44673/A-Development-of-Vegetable-Trading-Application-A-Case-Study-of-Khun-Khambun-Garden',
     },
     {
         emoji: '📊',
+        gradient: 'linear-gradient(135deg, #0ea5e922, #6366f122)',
+        title: 'E-budget management system',
+        description:
+            'API system for user management and access control with JWT authentication. Built with .NET 9.0, ASP.NET Identity, and SQL Server.',
+        tags: ['.NET 9.0', 'ASP.NET Core', 'JWT', 'SQL Server', 'Entity Framework Core'],
+        demo: '#',
+        code: 'https://github.com/Thanawat44673/Identity_minimal_API',
+    },
+    {
+        emoji: '🍜',
+        gradient: 'linear-gradient(135deg, #22c55e22, #14b8a622)',
+        title: 'Village-Food-Trading-API',
+        description:
+            'RESTful API for food trading marketplace. Enables vendors to list products and customers to browse and order food.',
+        tags: ['node.js', 'Express.js', 'Postgresql', 'Prisma', 'Scalar'],
+        demo: '#',
+        code: 'https://github.com/Thanawat44673/E-Commerce_API_backend/tree/main',
+    },
+    {
+        emoji: '📖',
         gradient: 'linear-gradient(135deg, #f59e0b22, #ef444422)',
-        title: 'Analytics Dashboard',
+        title: 'Mini-Student-Management-API', 
         description:
-            'Interactive data visualization dashboard with charts, filters, and real-time metric updates.',
-        tags: ['React', 'D3.js', 'REST API', 'TypeScript'],
+            'RESTful API for student management with user authentication, file upload, and student data operations.',
+        tags: ['node.js', 'Express.js', 'Postgresql', 'Postman'],
         demo: '#',
-        code: 'https://github.com',
-    },
-    {
-        emoji: '🎵',
-        gradient: 'linear-gradient(135deg, #ec489922, #8b5cf622)',
-        title: 'Music Streaming App',
-        description:
-            'Spotify-inspired app with playlist management, audio playback, and personalized recommendations.',
-        tags: ['React', 'Node.js', 'PostgreSQL', 'Prisma'],
-        demo: '#',
-        code: 'https://github.com',
-    },
-    {
-        emoji: '🌐',
-        gradient: 'linear-gradient(135deg, #06b6d422, #3b82f622)',
-        title: 'Portfolio v1',
-        description:
-            'My first portfolio — a static site showcasing early projects and experiments. The beginning of everything.',
-        tags: ['HTML', 'CSS', 'JavaScript', 'Vanilla'],
-        demo: '#',
-        code: 'https://github.com',
+        code: 'https://github.com/Thanawat44673/Mini-Student-Management-API-Prisma',
     },
 ];
 
@@ -110,9 +90,11 @@ export default function Projects() {
                                 </div>
 
                                 <div className="project-links">
-                                    <a href={p.demo} className="project-link primary" target="_blank" rel="noreferrer">
-                                        🚀 Live Demo
-                                    </a>
+                                    {p.demo && p.demo !== '#' && (
+                                        <a href={p.demo} className="project-link primary" target="_blank" rel="noreferrer">
+                                            🚀 Live Demo
+                                        </a>
+                                    )}
                                     <a href={p.code} className="project-link secondary" target="_blank" rel="noreferrer">
                                         &lt;/&gt; Code
                                     </a>
