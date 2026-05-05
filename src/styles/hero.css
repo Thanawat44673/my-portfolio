@@ -143,6 +143,12 @@
   animation: fadeInUp 0.7s ease 0.1s both;
 }
 
+@media (max-height: 700px) and (min-width: 768px) {
+  .hero-name {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+  }
+}
+
 .hero-name span {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
@@ -157,6 +163,12 @@
   font-weight: 400;
   line-height: 1.6;
   animation: fadeInUp 0.7s ease 0.2s both;
+}
+
+@media (max-height: 700px) and (min-width: 768px) {
+  .hero-tagline {
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  }
 }
 
 .hero-tagline strong {

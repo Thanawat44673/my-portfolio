@@ -45,6 +45,12 @@
   white-space: nowrap;
 }
 
+@media (max-height: 700px) and (min-width: 768px) {
+  .navbar-logo {
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+  }
+}
+
 .navbar-links {
   display: flex;
   align-items: center;

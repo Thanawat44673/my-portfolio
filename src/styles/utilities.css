@@ -28,6 +28,12 @@
   background-clip: text;
 }
 
+@media (max-height: 700px) and (min-width: 768px) {
+  .section-title {
+    font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  }
+}
+
 .section-subtitle {
   text-align: center;
   color: var(--text-secondary);
