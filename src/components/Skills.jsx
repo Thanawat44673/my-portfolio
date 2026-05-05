@@ -39,9 +39,6 @@ export default function Skills() {
         <section className="skills" id="skills" ref={sectionRef}>
             <div className="container">
                 <h2 className="section-title fade-in">Skills & Technologies</h2>
-                <p className="section-subtitle fade-in">
-                    The tools I use to bring ideas to life
-                </p>
 
                 <div className="skills-grid">
                     {categories.map((cat, i) => (

@@ -59,9 +59,6 @@ export default function Projects() {
         <section className="projects" id="projects" ref={sectionRef}>
             <div className="container">
                 <h2 className="section-title fade-in">Featured Projects</h2>
-                <p className="section-subtitle fade-in">
-                    A selection of things I've built with passion
-                </p>
 
                 <div className="projects-grid">
                     {projects.map((p, i) => (

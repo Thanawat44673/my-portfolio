@@ -16,8 +16,6 @@ export default function Experience() {
         <section className="experience" id="experience" ref={sectionRef}>
             <div className="container">
                 <h2 className="section-title fade-in">My Experience</h2>
-                <p className="section-subtitle fade-in"></p>
-
                 <div className="experience-wrapper fade-in">
                     <div className="experience-grid">
                         <div className="experience-item fade-in">
