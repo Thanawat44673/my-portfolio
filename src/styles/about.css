@@ -11,6 +11,26 @@
   align-items: center;
 }
 
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .about-grid {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 360px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about-grid {
+    gap: 24px;
+  }
+}
+
 .about-text p {
   color: var(--text-secondary);
   margin-bottom: 16px;
@@ -29,6 +49,19 @@
   padding: 28px 24px;
   text-align: center;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .stat-card {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .stat-card {
+    padding: 16px 12px;
+    border-radius: 16px;
+  }
 }
 
 .stat-card:hover {

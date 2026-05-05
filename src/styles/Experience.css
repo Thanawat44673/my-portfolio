@@ -3,6 +3,18 @@
   padding: 120px 0;
 }
 
+@media (max-width: 480px) {
+  .experience {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .experience {
+    padding: 40px 0;
+  }
+}
+
 .experience-wrapper {
   max-width: 1100px;
   margin: 0 auto;
@@ -24,6 +36,20 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .experience-item {
+    padding: 24px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .experience-item {
+    padding: 16px;
+    border-radius: 12px;
+  }
 }
 
 /* Top accent bar */
@@ -77,7 +103,7 @@
 }
 
 .job-title {
-  font-size: 1.45rem;
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
   font-weight: 800;
   color: var(--text-primary);
   margin: 0;

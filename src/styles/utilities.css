@@ -5,6 +5,18 @@
   padding: 0 24px;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 800;

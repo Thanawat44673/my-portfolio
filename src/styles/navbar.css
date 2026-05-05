@@ -21,8 +21,20 @@
   margin: 0 auto;
 }
 
+@media (max-width: 480px) {
+  .navbar-inner {
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-inner {
+    padding: 12px 12px;
+  }
+}
+
 .navbar-logo {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 4vw, 1.3rem);
   font-weight: 900;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
@@ -30,6 +42,7 @@
   background-clip: text;
   letter-spacing: -0.5px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .navbar-links {
@@ -86,6 +99,20 @@
   padding: 0;
 }
 
+@media (max-width: 480px) {
+  .theme-toggle {
+    width: 48px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 360px) {
+  .theme-toggle {
+    width: 44px;
+    height: 24px;
+  }
+}
+
 .toggle-track {
   width: 52px;
   height: 28px;
@@ -96,6 +123,22 @@
   display: flex;
   align-items: center;
   padding: 2px;
+}
+
+@media (max-width: 480px) {
+  .toggle-track {
+    width: 48px;
+    height: 26px;
+    border-radius: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .toggle-track {
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+  }
 }
 
 .toggle-thumb {
@@ -111,8 +154,36 @@
   box-shadow: 0 2px 8px var(--accent-glow);
 }
 
+@media (max-width: 480px) {
+  .toggle-thumb {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .toggle-thumb {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+}
+
 [data-theme='light'] .toggle-thumb {
   transform: translateX(24px);
+}
+
+@media (max-width: 480px) {
+  [data-theme='light'] .toggle-thumb {
+    transform: translateX(22px);
+  }
+}
+
+@media (max-width: 360px) {
+  [data-theme='light'] .toggle-thumb {
+    transform: translateX(20px);
+  }
 }
 
 /* Hamburger */
@@ -133,6 +204,25 @@
   background: var(--text-primary);
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .hamburger span {
+    width: 20px;
+    height: 1.8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hamburger {
+    gap: 4px;
+    padding: 2px;
+  }
+
+  .hamburger span {
+    width: 18px;
+    height: 1.6px;
+  }
 }
 
 .hamburger.active span:nth-child(1) {

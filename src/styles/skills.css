@@ -3,6 +3,18 @@
   padding: 100px 0;
 }
 
+@media (max-width: 480px) {
+  .skills {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .skills {
+    padding: 40px 0;
+  }
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

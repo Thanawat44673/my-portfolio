@@ -33,10 +33,6 @@
     display: flex;
   }
 
-  .hero {
-    padding: 100px 0 60px;
-  }
-
   .hero-name {
     letter-spacing: -1px;
   }
@@ -71,5 +67,77 @@
 
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .navbar-links {
+    padding: 16px 16px;
+  }
+
+  .hero-avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .section-title {
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 40px;
+  }
+
+  .project-card-body {
+    padding: 16px;
+  }
+
+  .project-desc {
+    font-size: 0.82rem;
+  }
+
+  .skill-category {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-links {
+    padding: 12px 12px;
+    gap: 12px;
+  }
+
+  .hero-avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .project-card-body {
+    padding: 12px;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-desc {
+    font-size: 0.75rem;
+  }
+
+  .project-tag {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+  }
+
+  .project-link {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .skill-category {
+    padding: 20px 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
   }
 }
