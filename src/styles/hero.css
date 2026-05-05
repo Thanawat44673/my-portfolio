@@ -3,9 +3,17 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   padding: 120px 0 80px;
+}
+
+@media (max-height: 700px) and (min-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 0 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -117,6 +125,13 @@
   position: relative;
   z-index: 1;
   max-width: 680px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 100%;
+  }
 }
 
 .hero-name {
