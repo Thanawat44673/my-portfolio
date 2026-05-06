@@ -23,22 +23,36 @@ const categories = [
     },
 ];
 
+// Hoisted outside the component — created once, never re-allocated on re-renders
+const OBSERVER_OPTIONS = { threshold: 0.1 };
+
 export default function Skills() {
     const sectionRef = useRef(null);
 
     useEffect(() => {
+        const section = sectionRef.current;
+        if (!section) return;
+
+        // Collect elements so cleanup can unobserve them even if the ref is gone
+        const elements = Array.from(section.querySelectorAll('.fade-in'));
+
         const observer = new IntersectionObserver(
             entries => entries.forEach(e => e.target.classList.toggle('visible', e.isIntersecting)),
-            { threshold: 0.1 }
+            OBSERVER_OPTIONS
         );
-        sectionRef.current?.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        return () => observer.disconnect();
-    }, []);
+
+        elements.forEach(el => observer.observe(el));
+
+        return () => {
+            elements.forEach(el => observer.unobserve(el));
+            observer.disconnect();
+        };
+    }, []); // empty deps — runs once after mount
 
     return (
-        <section className="skills" id="skills" ref={sectionRef}>
+        <section className="skills" id="skills" ref={sectionRef} aria-label="Skills and Technologies">
             <div className="container">
-                <h2 className="section-title fade-in">Skills & Technologies</h2>
+                <h2 className="section-title fade-in">Skills &amp; Technologies</h2>
 
                 <div className="skills-grid">
                     {categories.map((cat, i) => (
@@ -48,7 +62,7 @@ export default function Skills() {
                             style={{ transitionDelay: `${i * 0.1}s` }}
                         >
                             <div className="skill-category-title">
-                                <div className="skill-icon">{cat.icon}</div>
+                                <div className="skill-icon" aria-hidden="true">{cat.icon}</div>
                                 {cat.title}
                             </div>
                             <div className="skill-tags">

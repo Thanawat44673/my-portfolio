@@ -69,7 +69,11 @@
   }
 
   .section-title {
-    margin-bottom: 8px;
+    margin-bottom: 32px; /* was 8px — too small, caused grid to overlap title */
+  }
+
+  .skills-grid {
+    margin-top: 8px; /* extra buffer between title and first card on mobile */
   }
 
   .project-card-body {
