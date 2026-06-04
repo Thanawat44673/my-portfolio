@@ -17,21 +17,16 @@
   }
 }
 
+/* Section title — solid color, no gradient text */
 .section-title {
   position: relative;
-  /* establishes own stacking context */
   z-index: 1;
-  /* sits above card siblings that use transform */
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 800;
   text-align: center;
   margin-bottom: 22px;
   padding-bottom: 4px;
-  /* prevents gradient clip from cutting off descenders */
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 @media (max-height: 700px) and (min-width: 768px) {
@@ -50,18 +45,18 @@
   font-size: 0.92rem;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   border: none;
   font-family: 'Inter', sans-serif;
 }
 
+/* Primary button — flat solid violet, no glow box-shadow */
 .btn-primary {
-  background: var(--accent-gradient);
+  background: var(--accent-primary);
   color: #fff;
-  box-shadow: 0 4px 20px var(--accent-glow);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px var(--accent-glow);
+  background: var(--accent-secondary);
 }

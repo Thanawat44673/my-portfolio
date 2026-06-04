@@ -2,28 +2,23 @@ import { useEffect, useRef } from 'react';
 
 const categories = [
     {
-        icon: '🎨',
         title: 'Frontend',
         skills: ['React', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Vite'],
     },
     {
-        icon: '⚙️',
         title: 'Backend',
         skills: ['Node.js', 'Express', 'REST API', 'JWT', '.NET Minimal API'],
     },
     {
-        icon: '🗄️',
         title: 'Database',
         skills: ['PostgreSQL', 'MySQL', 'Firebase'],
     },
     {
-        icon: '🛠️',
         title: 'Tools & DevOps',
         skills: ['Git', 'GitHub', 'Docker', 'Vercel', 'Postman', 'Figma'],
     },
 ];
 
-// Hoisted outside the component — created once, never re-allocated on re-renders
 const OBSERVER_OPTIONS = { threshold: 0.1 };
 
 export default function Skills() {
@@ -33,7 +28,6 @@ export default function Skills() {
         const section = sectionRef.current;
         if (!section) return;
 
-        // Collect elements so cleanup can unobserve them even if the ref is gone
         const elements = Array.from(section.querySelectorAll('.fade-in'));
 
         const observer = new IntersectionObserver(
@@ -47,7 +41,7 @@ export default function Skills() {
             elements.forEach(el => observer.unobserve(el));
             observer.disconnect();
         };
-    }, []); // empty deps — runs once after mount
+    }, []);
 
     return (
         <section className="skills" id="skills" ref={sectionRef} aria-label="Skills and Technologies">
@@ -62,7 +56,8 @@ export default function Skills() {
                             style={{ transitionDelay: `${i * 0.1}s` }}
                         >
                             <div className="skill-category-title">
-                                <div className="skill-icon" aria-hidden="true">{cat.icon}</div>
+                                {/* CSS dot replaces emoji icon box */}
+                                <span className="skill-icon" aria-hidden="true" />
                                 {cat.title}
                             </div>
                             <div className="skill-tags">

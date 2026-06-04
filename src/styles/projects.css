@@ -22,43 +22,33 @@
   gap: 24px;
 }
 
+/* Card — flat border, no glow on hover */
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 24px;
+  border-radius: 16px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
   border-color: var(--border);
-  transform: translateY(-6px);
-  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
 }
 
+/* Project card header — no emoji, color-tinted surface */
 .project-card-header {
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.5rem;
-  position: relative;
-  overflow: hidden;
+  height: 6px;
+  background: var(--accent-primary);
+  opacity: 0.5;
 }
 
 @media (max-width: 480px) {
   .project-card-header {
-    height: 140px;
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 360px) {
-  .project-card-header {
-    height: 120px;
-    font-size: 2rem;
+    height: 4px;
   }
 }
 
@@ -70,9 +60,10 @@
 }
 
 .project-title {
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-size: clamp(0.9rem, 3vw, 1.05rem);
   font-weight: 700;
   margin-bottom: 8px;
+  color: var(--text-primary);
 }
 
 @media (max-height: 700px) and (min-width: 768px) {
@@ -99,9 +90,10 @@
 .project-tag {
   padding: 3px 10px;
   background: var(--tag-bg);
-  border-radius: 6px;
-  font-size: 0.75rem;
-  color: var(--accent-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
   font-family: 'Fira Code', monospace;
 }
 
@@ -114,28 +106,36 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
-  border-radius: 10px;
+  padding: 7px 16px;
+  border-radius: 8px;
   font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
   border: none;
   font-family: 'Inter', sans-serif;
 }
 
+/* Primary link — flat solid violet */
 .project-link.primary {
-  background: var(--accent-gradient);
+  background: var(--accent-primary);
   color: #fff;
+  border: 1px solid transparent;
 }
 
+.project-link.primary:hover {
+  background: var(--accent-secondary);
+}
+
+/* Secondary link — outlined */
 .project-link.secondary {
-  background: var(--skill-bg);
-  color: var(--text-primary);
+  background: transparent;
+  color: var(--text-secondary);
   border: 1px solid var(--border);
 }
 
-.project-link:hover {
-  transform: translateY(-2px);
+.project-link.secondary:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }

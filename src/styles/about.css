@@ -3,36 +3,6 @@
   padding: clamp(60px, 8vw, 100px) 0;
   background: var(--bg-secondary);
   position: relative;
-  overflow: hidden;
-}
-
-.about::before {
-  content: '';
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.08), transparent 70%);
-  top: -100px;
-  right: -100px;
-  pointer-events: none;
-}
-
-/* Section title accent */
-.section-title {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 56px;
-}
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  border-radius: 2px;
-  background: var(--accent-gradient);
 }
 
 /* Grid */
@@ -43,7 +13,26 @@
   align-items: center;
 }
 
-/* ─── Avatar scene ─── */
+/* Section title accent — thin violet underline, not gradient */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 56px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent-primary);
+  opacity: 0.5;
+}
+
+/* ─── Avatar scene — no animated glow, clean frame ─── */
 .about-image-wrapper {
   display: flex;
   align-items: center;
@@ -57,38 +46,23 @@
   justify-content: center;
 }
 
-.about-avatar-glow {
-  position: absolute;
-  width: 340px;
-  height: 340px;
-  border-radius: 50%;
-  background: var(--accent-gradient);
-  opacity: 0.12;
-  filter: blur(48px);
-  animation: glowPulse 4s ease-in-out infinite;
-}
-
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.10; transform: scale(1); }
-  50%       { opacity: 0.20; transform: scale(1.08); }
-}
-
 .about-avatar {
   width: 300px;
   height: 300px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  background: var(--accent-gradient);
-  padding: 4px;
+  /* Single solid violet ring — no gradient, no glow */
+  border: 3px solid rgba(124, 58, 237, 0.45);
   position: relative;
   z-index: 1;
-  animation: morph 8s ease-in-out infinite, fadeInUp 0.7s ease 0.2s both;
+  animation: morph 10s ease-in-out infinite, fadeInUp 0.7s ease 0.2s both;
+  padding: 0;
+  background: transparent;
 }
 
 .about-avatar-inner {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: var(--bg-secondary);
   overflow: hidden;
 }
 
@@ -110,28 +84,26 @@
   border-bottom: 1px solid var(--border-subtle);
 }
 
+/* Solid color name — no gradient text */
 .about-bio-name {
   font-size: 1.25rem;
-  font-weight: 800;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 700;
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
 .about-bio-role {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: var(--accent-primary);
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 /* ─── Bio card ─── */
 .about-text {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 36px;
 }
 
@@ -142,8 +114,13 @@
   font-size: 1rem;
 }
 
-.about-text p:last-of-type { margin-bottom: 0; }
-.about-text strong { color: var(--text-primary); }
+.about-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+}
 
 /* ─── Skill tags ─── */
 .about-tags {
@@ -154,34 +131,43 @@
 }
 
 .about-tag {
-  padding: 5px 14px;
-  border-radius: 100px;
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.25);
-  color: var(--accent-secondary);
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: var(--skill-bg);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
   font-size: 0.78rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.about-tag:hover {
-  background: rgba(124, 58, 237, 0.2);
-  border-color: var(--accent-primary);
-  transform: translateY(-2px);
+  font-weight: 500;
+  font-family: 'Fira Code', monospace;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 /* ─── Responsive ─── */
 @media (max-width: 900px) {
-  .about-grid { grid-template-columns: 1fr; gap: 64px; }
-  .about-text { padding: 28px; }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-text {
+    padding: 28px;
+  }
 }
 
 @media (max-width: 480px) {
-  .about-avatar { width: 260px; height: 260px; }
-  .about-avatar-glow { width: 280px; height: 280px; }
-  .about-text { padding: 20px; }
+  .about-avatar {
+    width: 260px;
+    height: 260px;
+  }
+
+  .about-text {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 360px) {
-  .about-avatar { width: 220px; height: 220px; }
+  .about-avatar {
+    width: 220px;
+    height: 220px;
+  }
 }

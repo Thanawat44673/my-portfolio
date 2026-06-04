@@ -22,7 +22,6 @@ export default function About() {
                     {/* ─── Left: Avatar ─── */}
                     <div className="about-image-wrapper fade-in">
                         <div className="about-avatar-scene">
-                            <div className="about-avatar-glow" />
                             <div className="about-avatar">
                                 <div className="about-avatar-inner">
                                     <img src={avatarImg} alt="Thanawat Saninat" />

@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# AI Tool
+.agents
+.claude
+.gemini
+.impeccable
+DESIGN.md
+PRODUCT.md

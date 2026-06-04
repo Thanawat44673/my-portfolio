@@ -9,57 +9,20 @@
   padding: clamp(60px, 10vw, 120px) 0 80px;
 }
 
+/* Subtle static grain — no moving blobs */
 .hero-bg {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
 
-/* Dot grid texture */
 .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(124, 58, 237, 0.18) 1px, transparent 1px);
-  background-size: 36px 36px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
-}
-
-/* Blobs */
-.hero-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.22;
-  animation: float 8s ease-in-out infinite;
-}
-
-.hero-blob-1 {
-  width: clamp(180px, 40vw, 500px);
-  height: clamp(180px, 40vw, 500px);
-  background: radial-gradient(circle, #7c3aed, transparent);
-  top: -100px;
-  right: -100px;
-}
-
-.hero-blob-2 {
-  width: clamp(130px, 30vw, 350px);
-  height: clamp(130px, 30vw, 350px);
-  background: radial-gradient(circle, #ec4899, transparent);
-  bottom: -50px;
-  left: -80px;
-  animation-delay: -3s;
-}
-
-.hero-blob-3 {
-  width: clamp(200px, 35vw, 400px);
-  height: clamp(200px, 35vw, 400px);
-  background: radial-gradient(circle, #6d28d9, transparent);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.1;
-  animation-delay: -5s;
+  background-image: radial-gradient(rgba(124, 58, 237, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 100%);
 }
 
 /* Layout */
@@ -74,66 +37,49 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 620px;
   width: 100%;
 }
 
-/* Name */
+/* Name — solid color, no gradient text */
 .hero-name {
   font-size: clamp(2.6rem, 7vw, 4.5rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -2px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   margin-bottom: 16px;
+  color: var(--text-primary);
 }
 
-
-/* Gradient name accent */
+/* Single-color name accent — violet, not gradient */
 .hero-name-accent {
-  background: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899, #a855f7, #7c3aed);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 6s ease infinite;
-}
-
-@keyframes gradientShift {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
+  color: var(--accent-primary);
 }
 
 /* Tagline */
 .hero-tagline {
-  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: var(--text-secondary);
   margin-bottom: 16px;
   font-weight: 400;
   line-height: 1.6;
 }
 
+/* Slim violet separator — no gradient */
 .hero-tagline::after {
   content: '';
   display: block;
-  height: 2px;
+  height: 1px;
   width: 0;
   opacity: 0;
   margin: 14px auto 16px;
-  border-radius: 2px;
-  background: var(--accent-gradient);
-  transition: width 0.6s ease 0.2s, opacity 0.6s ease 0.2s;
+  background: var(--accent-primary);
+  transition: width 0.5s ease 0.15s, opacity 0.5s ease 0.15s;
 }
 
 .hero-tagline.visible::after {
-  width: 48px;
-  opacity: 1;
+  width: 40px;
+  opacity: 0.6;
 }
 
 /* Actions */
@@ -143,32 +89,6 @@
   gap: 14px;
   margin-bottom: 48px;
   justify-content: center;
-}
-
-/* Button shimmer */
-.btn-primary {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary::after {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 -100%;
-  width: 55%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
-  animation: shimmer 3.5s ease-in-out 1.5s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-
-  40%,
-  100% {
-    left: 150%;
-  }
 }
 
 /* Socials */
@@ -197,15 +117,13 @@
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 1rem;
-  transition: all 0.25s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .social-link:hover {
   background: var(--accent-primary);
   color: #fff;
   border-color: var(--accent-primary);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px var(--accent-glow);
 }
 
 [data-theme='light'] .social-link {
@@ -217,4 +135,5 @@
 [data-theme='light'] .social-link:hover {
   background: var(--accent-primary);
   color: #fff;
+  border-color: var(--accent-primary);
 }

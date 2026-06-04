@@ -7,19 +7,22 @@
   --bg-card: #16213e;
   --bg-card-hover: #1e2d4a;
   --accent-primary: #7c3aed;
-  --accent-secondary: #a855f7;
-  --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%);
-  --accent-glow: rgba(124, 58, 237, 0.35);
+  --accent-secondary: #9d60f0;
+  /* Solid violet — no gradient text, no rose */
+  --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #9d60f0 100%);
+  /* Glow kept minimal — used only on interactive states */
+  --accent-glow: rgba(124, 58, 237, 0.18);
   --text-primary: #f0f0f8;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  --border: rgba(124, 58, 237, 0.2);
+  --border: rgba(124, 58, 237, 0.18);
   --border-subtle: rgba(255, 255, 255, 0.06);
-  --navbar-bg: rgba(15, 15, 26, 0.85);
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
-  --skill-bg: rgba(124, 58, 237, 0.12);
-  --tag-bg: rgba(124, 58, 237, 0.15);
+  --navbar-bg: rgba(15, 15, 26, 0.9);
+  /* Shadows: no glow tint, just depth */
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.28);
+  --skill-bg: rgba(124, 58, 237, 0.08);
+  --tag-bg: rgba(124, 58, 237, 0.08);
 }
 
 [data-theme='light'] {
@@ -28,17 +31,17 @@
   --bg-card: #ffffff;
   --bg-card-hover: #f0f2ff;
   --accent-primary: #6d28d9;
-  --accent-secondary: #9333ea;
-  --accent-gradient: linear-gradient(135deg, #6d28d9 0%, #9333ea 50%, #db2777 100%);
-  --accent-glow: rgba(109, 40, 217, 0.2);
+  --accent-secondary: #8b44e0;
+  --accent-gradient: linear-gradient(135deg, #6d28d9 0%, #8b44e0 100%);
+  --accent-glow: rgba(109, 40, 217, 0.12);
   --text-primary: #0f0f1a;
   --text-secondary: #475569;
   --text-muted: #94a3b8;
-  --border: rgba(109, 40, 217, 0.2);
+  --border: rgba(109, 40, 217, 0.16);
   --border-subtle: rgba(0, 0, 0, 0.07);
-  --navbar-bg: rgba(248, 249, 255, 0.85);
-  --shadow: 0 20px 60px rgba(109, 40, 217, 0.12);
-  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --skill-bg: rgba(109, 40, 217, 0.08);
-  --tag-bg: rgba(109, 40, 217, 0.1);
+  --navbar-bg: rgba(248, 249, 255, 0.92);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.07);
+  --skill-bg: rgba(109, 40, 217, 0.07);
+  --tag-bg: rgba(109, 40, 217, 0.07);
 }
