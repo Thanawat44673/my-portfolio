@@ -1,4 +1,4 @@
-# 💼 My Portfolio
+# My Portfolio
 
 A modern, responsive personal portfolio website built with **React** and **Vite**. Features a sleek dark/light theme toggle, smooth animations, and a modular CSS architecture.
 
@@ -8,7 +8,7 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 ---
 
-## ✨ Features
+## Features
 
 - 🌗 **Dark / Light Mode** — seamless theme switching with persistent preference
 - 🎨 **Gradient Accents** — vibrant purple-to-pink gradient design system
@@ -18,7 +18,7 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer     | Technology              |
 |-----------|-------------------------|
@@ -30,7 +30,7 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 my-portfolio/
@@ -72,7 +72,7 @@ my-portfolio/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -106,7 +106,7 @@ The app will be available at `http://localhost:5173`.
 
 ---
 
-## 🎨 Theming
+##  Theming
 
 The portfolio uses CSS custom properties defined in `src/styles/variables.css`. Toggle between dark and light themes via the switch in the navbar. Theme preference is managed by `ThemeContext`.
 
@@ -114,6 +114,6 @@ To customize colors, edit the `:root` (dark) and `[data-theme='light']` blocks i
 
 ---
 
-## 📄 License
+##  License
 
-This project is open source and available for personal use.
+This project is open source and available under the MIT License.
