@@ -22,7 +22,7 @@
   gap: 24px;
 }
 
-/* Card — flat border, no glow on hover */
+/* Card: flat border, no glow on hover */
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -39,7 +39,7 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* Project card header — no emoji, color-tinted surface */
+/* Project card header: no emoji, color-tinted surface */
 .project-card-header {
   height: 6px;
   background: var(--accent-primary);
@@ -117,7 +117,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Primary link — flat solid violet */
+/* Primary link: flat solid violet */
 .project-link.primary {
   background: var(--accent-primary);
   color: #fff;
@@ -128,7 +128,7 @@
   background: var(--accent-secondary);
 }
 
-/* Secondary link — outlined */
+/* Secondary link: outlined */
 .project-link.secondary {
   background: transparent;
   color: var(--text-secondary);

@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-inner">
                 <p className="footer-copy">
-                    © {year} — Designed & Built by <span>Thanawat Saninat</span> with ❤️
+                    © {year} · Designed & Built by <span>Thanawat Saninat</span>
                 </p>
                 <div className="footer-links">
                     <a href="#hero">Home</a>

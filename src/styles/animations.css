@@ -28,7 +28,7 @@
   }
 }
 
-/* Avatar morph — slow, organic */
+/* Avatar morph: slow, organic */
 @keyframes morph {
   0%,
   100% {
@@ -45,7 +45,7 @@
   }
 }
 
-/* ──────────────────────────────────────────────────────
+/* Scroll reveal notes
    Scroll-reveal: VISIBLE BY DEFAULT, motion as enhancement.
 
    Content is always fully visible. The .fade-in class by
@@ -55,7 +55,7 @@
 
    JS adds [data-motion="ready"] to <html> after observer setup.
    Without that attribute, all .fade-in elements are static.
-   ────────────────────────────────────────────────────── */
+ */
 
 /* Default: fully visible, no transition */
 .fade-in {
@@ -78,12 +78,12 @@ html[data-motion="ready"] .fade-in.visible {
   transform: translateY(0);
 }
 
-/* ──────────────────────────────────────────────────────
+/* Reduced motion notes
    Reduced motion: comprehensive catch-all.
    Kills all animation and transition across the entire site.
    Content stays fully visible; interactive feedback preserved
    via instant state changes.
-   ────────────────────────────────────────────────────── */
+ */
 @media (prefers-reduced-motion: reduce) {
   /* Never activate motion-ready hiding */
   html[data-motion="ready"] .fade-in {

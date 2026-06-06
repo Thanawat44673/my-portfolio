@@ -17,7 +17,7 @@
   }
 }
 
-/* Section title — solid color, no gradient text */
+/* Section title: solid color, no gradient text */
 .section-title {
   position: relative;
   z-index: 1;
@@ -50,7 +50,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Primary button — flat solid violet, no glow box-shadow */
+/* Primary button: flat solid violet, no glow box-shadow */
 .btn-primary {
   background: var(--accent-primary);
   color: #fff;

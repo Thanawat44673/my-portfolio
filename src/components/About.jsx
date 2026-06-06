@@ -34,7 +34,7 @@ export default function About() {
                     <div className="about-text fade-in">
                         <div className="about-bio-header">
                             <span className="about-bio-name">Thanawat Saninat</span>
-                            <span className="about-bio-role">Computer Engineering · Fullstack Developer</span>
+                            <span className="about-bio-role">Computer Engineering · Full-stack Developer</span>
                         </div>
                         <p>
                             My name is Fluk, a Computer Engineering graduate seeking a Full-stack Developer role,

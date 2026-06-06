@@ -15,7 +15,7 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-inner">
-                <a href="#hero" className="navbar-logo">My portfoilo</a>
+                <a href="#hero" className="navbar-logo">Thanawat</a>
 
                 <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
                     {navLinks.map(link => (

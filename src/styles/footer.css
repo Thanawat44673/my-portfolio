@@ -52,10 +52,7 @@
 }
 
 .footer-copy span {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-primary);
   font-weight: 600;
 }
 

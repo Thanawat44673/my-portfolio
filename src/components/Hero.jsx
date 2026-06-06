@@ -14,7 +14,7 @@ export default function Hero() {
 
     return (
         <section className="hero" id="hero" ref={sectionRef}>
-            {/* Subtle dot-grid static bg — no moving blobs */}
+            {/* Subtle dot-grid static background, no moving blobs */}
             <div className="hero-bg" aria-hidden="true" />
 
             <div className="container hero-center">
@@ -26,7 +26,7 @@ export default function Hero() {
                     </h1>
 
                     <p className="hero-tagline fade-in" style={{ transitionDelay: '0.2s' }}>
-                        Fullstack Developer
+                        Full-stack Developer
                     </p>
 
                     <div className="hero-actions fade-in" style={{ transitionDelay: '0.35s' }}>

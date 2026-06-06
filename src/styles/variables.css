@@ -8,9 +8,9 @@
   --bg-card-hover: #1e2d4a;
   --accent-primary: #7c3aed;
   --accent-secondary: #9d60f0;
-  /* Solid violet — no gradient text, no rose */
+  /* Solid violet, no gradient text or rose */
   --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #9d60f0 100%);
-  /* Glow kept minimal — used only on interactive states */
+  /* Glow kept minimal, used only on interactive states */
   --accent-glow: rgba(124, 58, 237, 0.18);
   --text-primary: #f0f0f8;
   --text-secondary: #94a3b8;
