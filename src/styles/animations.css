@@ -1,10 +1,16 @@
 /* ===== ANIMATIONS ===== */
+
+/* Easing tokens */
+:root {
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(14px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -14,68 +20,85 @@
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(24px);
+    transform: translateX(20px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* Gentle float — smaller travel, slower cycle */
-@keyframes float {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(0, -8px);
-  }
-}
-
-/* Avatar morph — organic but unhurried */
+/* Avatar morph — slow, organic */
 @keyframes morph {
   0%,
   100% {
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   }
-
   25% {
     border-radius: 70% 30% 40% 60% / 60% 40% 50% 50%;
   }
-
   50% {
     border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%;
   }
-
   75% {
     border-radius: 30% 70% 60% 40% / 40% 50% 60% 50%;
   }
 }
 
-/* Fade-in scroll reveal — shorter travel, softer easing */
+/* ──────────────────────────────────────────────────────
+   Scroll-reveal: VISIBLE BY DEFAULT, motion as enhancement.
+
+   Content is always fully visible. The .fade-in class by
+   itself does nothing to visibility. Motion is only added
+   when JS marks the document as motion-capable AND the user
+   hasn't opted out of motion.
+
+   JS adds [data-motion="ready"] to <html> after observer setup.
+   Without that attribute, all .fade-in elements are static.
+   ────────────────────────────────────────────────────── */
+
+/* Default: fully visible, no transition */
 .fade-in {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  opacity: 1;
+  transform: none;
 }
 
-.fade-in.visible {
+/* When JS confirms motion is available AND user hasn't disabled it:
+   set up the hidden state for elements not yet scrolled into view */
+html[data-motion="ready"] .fade-in {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s var(--ease-out-quart),
+              transform 0.5s var(--ease-out-quart);
+}
+
+/* Revealed by IntersectionObserver */
+html[data-motion="ready"] .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Honor reduced-motion: instant show, no translation */
+/* ──────────────────────────────────────────────────────
+   Reduced motion: comprehensive catch-all.
+   Kills all animation and transition across the entire site.
+   Content stays fully visible; interactive feedback preserved
+   via instant state changes.
+   ────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .fade-in {
+  /* Never activate motion-ready hiding */
+  html[data-motion="ready"] .fade-in {
     opacity: 1;
     transform: none;
     transition: none;
   }
 
-  .about-avatar {
-    animation: none;
+  /* Global catch-all for everything else */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

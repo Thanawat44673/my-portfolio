@@ -32,7 +32,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   padding: 36px;
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s var(--ease-out-quart), transform 0.25s var(--ease-out-quart), box-shadow 0.25s var(--ease-out-quart);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -63,7 +63,7 @@
   height: 3px;
   background: var(--accent-primary);
   opacity: 0.4;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.2s var(--ease-out-quart);
 }
 
 .experience-item:hover {
@@ -164,7 +164,7 @@
   border: 1px solid var(--border);
   font-weight: 500;
   font-family: 'Fira Code', monospace;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: background 0.15s var(--ease-out-quart), color 0.15s var(--ease-out-quart), border-color 0.15s var(--ease-out-quart);
   cursor: default;
   letter-spacing: 0.01em;
 }

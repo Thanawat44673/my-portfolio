@@ -74,7 +74,7 @@
   opacity: 0;
   margin: 14px auto 16px;
   background: var(--accent-primary);
-  transition: width 0.5s ease 0.15s, opacity 0.5s ease 0.15s;
+  transition: width 0.5s var(--ease-out-quart) 0.15s, opacity 0.5s var(--ease-out-quart) 0.15s;
 }
 
 .hero-tagline.visible::after {
@@ -117,23 +117,35 @@
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition: color 0.15s var(--ease-out-quart), border-color 0.15s var(--ease-out-quart), background 0.15s var(--ease-out-quart);
 }
 
-.social-link:hover {
-  background: var(--accent-primary);
-  color: #fff;
-  border-color: var(--accent-primary);
-}
-
-[data-theme='light'] .social-link {
+[data-theme='light'] #social-link-git {
   background: #2d2d3d;
   color: #f0f0f8;
   border-color: #3d3d4d;
 }
 
-[data-theme='light'] .social-link:hover {
-  background: var(--accent-primary);
-  color: #fff;
-  border-color: var(--accent-primary);
+[data-theme='light'] #social-link-in {
+  background: #1f1fe4;
+  color: #ffffff;
+  border-color: #3d3d4d;
+}
+
+[data-theme='light'] #social-link-Email {
+  background: red;
+  color: #f0f0f8;
+  border-color: #3d3d4d;
+}
+
+[data-theme='dark'] #social-link-git:hover {
+  background: rgb(0, 0, 0);
+}
+
+[data-theme='dark'] #social-link-in:hover {
+  background: rgb(62, 124, 240);
+}
+
+[data-theme='dark'] #social-link-Email:hover {
+  background: rgb(255, 0, 0);
 }

@@ -28,7 +28,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s var(--ease-out-quart), transform 0.25s var(--ease-out-quart), box-shadow 0.25s var(--ease-out-quart);
   display: flex;
   flex-direction: column;
 }
@@ -111,7 +111,7 @@
   font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: background 0.15s var(--ease-out-quart), color 0.15s var(--ease-out-quart), border-color 0.15s var(--ease-out-quart);
   cursor: pointer;
   border: none;
   font-family: 'Inter', sans-serif;

@@ -27,7 +27,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   padding: 28px;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s var(--ease-out-quart), box-shadow 0.25s var(--ease-out-quart);
 }
 
 .skill-category:hover {
@@ -72,7 +72,7 @@
   font-size: 0.78rem;
   color: var(--text-secondary);
   font-family: 'Fira Code', monospace;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: background 0.15s var(--ease-out-quart), color 0.15s var(--ease-out-quart), border-color 0.15s var(--ease-out-quart);
 }
 
 .skill-tag:hover {

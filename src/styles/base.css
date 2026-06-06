@@ -17,7 +17,8 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.3s var(--ease-out-quart),
+              color 0.3s var(--ease-out-quart);
   overflow-x: hidden;
 }
 
