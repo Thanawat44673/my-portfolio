@@ -63,7 +63,7 @@
   gap: 8px;
 }
 
-/* Tags — muted at rest, violet on hover */
+/* Tags: muted at rest, amber-orange on hover */
 .skill-tag {
   padding: 4px 10px;
   background: var(--tag-bg);
@@ -77,6 +77,6 @@
 
 .skill-tag:hover {
   background: var(--accent-primary);
-  color: #fff;
+  color: var(--accent-contrast);
   border-color: var(--accent-primary);
 }

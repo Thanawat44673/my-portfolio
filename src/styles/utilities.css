@@ -50,10 +50,10 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Primary button: flat solid violet, no glow box-shadow */
+/* Primary button: flat solid amber-orange, no glow box-shadow */
 .btn-primary {
   background: var(--accent-primary);
-  color: #fff;
+  color: var(--accent-contrast);
 }
 
 .btn-primary:hover {

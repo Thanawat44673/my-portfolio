@@ -117,15 +117,16 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Primary link: flat solid violet */
+/* Primary link: flat solid amber-orange */
 .project-link.primary {
   background: var(--accent-primary);
-  color: #fff;
+  color: var(--accent-contrast);
   border: 1px solid transparent;
 }
 
 .project-link.primary:hover {
   background: var(--accent-secondary);
+  color: #fff;
 }
 
 /* Secondary link: outlined */

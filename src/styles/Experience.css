@@ -53,7 +53,7 @@
   }
 }
 
-/* Thin violet accent bar: always visible, signals active card type */
+/* Thin amber-orange accent bar: always visible, signals active card type */
 .experience-item::before {
   content: '';
   position: absolute;
@@ -171,6 +171,6 @@
 
 .tech-tag:hover {
   background: var(--accent-primary);
-  color: #fff;
+  color: var(--accent-contrast);
   border-color: var(--accent-primary);
 }

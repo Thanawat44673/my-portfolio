@@ -20,7 +20,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(124, 58, 237, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(245, 158, 11, 0.1) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 100%);
 }
@@ -51,7 +51,7 @@
   color: var(--text-primary);
 }
 
-/* Single-color name accent: violet, not gradient */
+/* Single-color name accent: amber-orange, not gradient */
 .hero-name-accent {
   color: var(--accent-primary);
 }
@@ -65,7 +65,7 @@
   line-height: 1.6;
 }
 
-/* Slim violet separator: no gradient */
+/* Slim amber-orange separator: no gradient */
 .hero-tagline::after {
   content: '';
   display: block;
@@ -151,6 +151,6 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22),
               inset 0 1px 0 rgba(255, 255, 255, 0.16);
-  outline: 3px solid rgba(124, 58, 237, 0.35);
+  outline: 3px solid rgba(245, 158, 11, 0.4);
   outline-offset: 3px;
 }
